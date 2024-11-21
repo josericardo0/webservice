@@ -1,7 +1,7 @@
 package dao;
 
 import org.springframework.stereotype.Component;
-import util.Usuario;
+import model.Usuario;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -29,6 +29,11 @@ public class UsuarioDaoService {
     public Usuario findOne(int id) {
         Predicate<? super Usuario> predicate = usuario -> usuario.getId().equals(id);
         return usuarios.stream().filter(predicate).findFirst().orElse(null);
+    }
+
+    public void deleteById(int id) {
+        Predicate<? super Usuario> predicate = usuario -> usuario.getId().equals(id);
+        usuarios.removeIf(predicate);
     }
 
     public Usuario save(Usuario usuario) {

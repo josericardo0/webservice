@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
-@ComponentScan(basePackages = {"controller", "dao", "util"})
+@ComponentScan(basePackages = {"controller", "dao", "model"})
 @SpringBootApplication
 public class WebserviceApplication {
 
